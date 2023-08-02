@@ -37,7 +37,8 @@ print(y_train)
 print(y_test)
 
 # Feature Scaling
-# For some machine learning models we want to avoid that some features will dominate other features. So we want to standardize all the features to have them in the same range.
+# For some machine learning models we want to avoid that some features will dominate other features. Otherwise some Features will not be considered.
+# Therefore we want to standardize all the features to have them in the same range.
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train[:,3:] = sc.fit_transform(X_train[:, 3:])
