@@ -42,6 +42,6 @@ print(y_test)
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train[:,3:] = sc.fit_transform(X_train[:, 3:])
-X_test[:,3:] = sc.transform(X_test[:, 3:])
+X_test[:,3:] = sc.transform(X_test[:, 3:])  # Only transform! So the standardization parameters will only be calculated based on the training data. This guarantees the independence of the test data.
 print(X_train)
 print(X_test)
